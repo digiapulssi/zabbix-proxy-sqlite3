@@ -1,9 +1,10 @@
 FROM zabbix/zabbix-proxy-sqlite3:ubuntu-4.0-latest
 
 # Build and install SQLite unixODBC driver
-RUN apk update && \
-    apk add build-base sqlite-dev unixodbc-dev && \
+RUN apt-get update && \
+    apt-get install -y build-essential sqlite3 libsqlite3-dev unixodbc-dev && \
     cd /tmp/ && \
+    apt-get install -y wget && \
     wget http://www.ch-werner.de/sqliteodbc/sqliteodbc-0.9996.tar.gz && \
     tar zxvf sqliteodbc-0.9996.tar.gz && \
     cd sqliteodbc-0.9996 && \
@@ -11,6 +12,6 @@ RUN apk update && \
     make && \
     make install && \
     rm -fr /tmp/sqliteodbc-0.9996 && \
-    apk del --purge build-base sqlite-dev unixodbc-dev && \
+    apt-get purge -y build-essential sqlite3 libsqlite3-dev unixodbc-dev && \
     rm -rf /var/cache/apk/*
-
+    
