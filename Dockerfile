@@ -14,3 +14,4 @@ RUN apt-get update && \
     rm -fr /tmp/sqliteodbc-0.9996 && \
     apt-get purge -y build-essential sqlite3 libsqlite3-dev unixodbc-dev && \
     rm -rf /var/cache/apk/*
+    
