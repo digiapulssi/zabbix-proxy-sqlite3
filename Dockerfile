@@ -1,4 +1,4 @@
-FROM zabbix/zabbix-proxy-sqlite3:alpine-4.0-latest
+FROM zabbix/zabbix-proxy-sqlite3:alpine-4.4-latest
 
 # Build and install SQLite unixODBC driver
 RUN apk update && \
