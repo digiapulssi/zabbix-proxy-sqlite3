@@ -1,4 +1,5 @@
 FROM zabbix/zabbix-proxy-sqlite3:alpine-4.4-latest
+USER root
 
 # Build and install SQLite unixODBC driver
 RUN apk update && \
@@ -13,4 +14,6 @@ RUN cd /tmp/ && \
 RUN rm -fr /tmp/sqliteodbc-0.9996 && \
     apk del --purge build-base sqlite-dev unixodbc-dev && \
     rm -rf /var/cache/apk/*
+    
+USER zabbix
 
