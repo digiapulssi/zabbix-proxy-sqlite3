@@ -13,8 +13,8 @@ RUN apt-get update && \
     make install && \
     rm -fr /tmp/sqliteodbc-0.9996 && \
     apt-get purge -y build-essential sqlite3 libsqlite3-dev unixodbc-dev && \
-	
-	apt-get install -y python3-pip python3  && \
+
+    apt-get install -y python3-pip python3  && \
     cd /usr/local/bin && \
     ln -s /usr/bin/python3 python && \
     pip3 install --upgrade --no-cache-dir requests && \
