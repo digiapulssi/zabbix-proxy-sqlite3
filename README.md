@@ -5,6 +5,5 @@ This container is based on the official [zabbix/zabbix-proxy-sqlite3](https://hu
 with the following modifications:
 
 * SQLite ODBC driver pre-built and installed in the container
-* Python3 installation with requests library 
 
 Only Alpine version is supported so far.
