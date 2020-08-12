@@ -21,5 +21,5 @@ RUN apt-get update && \
     ln -s /usr/bin/python3 python && \
     pip3 install --upgrade --no-cache-dir requests && \
     rm -rf /var/cache/apk/*
- 
-
+	
+USER zabbix
