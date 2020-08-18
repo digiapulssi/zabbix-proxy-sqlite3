@@ -1,7 +1,5 @@
 FROM zabbix/zabbix-proxy-sqlite3:ubuntu-4.4-latest
 
-USER root
-
 # Build and install SQLite unixODBC driver, Python and requests library
 RUN apt-get update && \
     apt-get install -y build-essential sqlite3 libsqlite3-dev unixodbc-dev && \
