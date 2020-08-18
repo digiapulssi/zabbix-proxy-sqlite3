@@ -1,4 +1,4 @@
-FROM zabbix/zabbix-proxy-sqlite3:ubuntu-4.4-latest
+FROM zabbix/zabbix-proxy-sqlite3:ubuntu-4.4.8
 
 USER root
 
