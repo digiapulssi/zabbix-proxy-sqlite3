@@ -1,5 +1,6 @@
-FROM zabbix/zabbix-proxy-sqlite3:ubuntu-4.4.8
+FROM zabbix/zabbix-proxy-sqlite3:ubuntu-5.0.6
 
+USER root
 # Build and install SQLite unixODBC driver, Python and requests library
 RUN apt-get update && \
     apt-get install -y build-essential sqlite3 libsqlite3-dev unixodbc-dev && \
@@ -19,3 +20,5 @@ RUN apt-get update && \
     ln -s /usr/bin/python3 python && \
     pip3 install --upgrade --no-cache-dir requests && \
     rm -rf /var/cache/apk/*
+
+USER 1997
